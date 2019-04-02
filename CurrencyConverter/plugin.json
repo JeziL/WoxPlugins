@@ -1,0 +1,12 @@
+{
+  "ID": "57C3265717F04915BE76A7C8F9ECCC86",
+  "ActionKeyword": "*",
+  "Name": "Currency Converter",
+  "Description": "A currency converter for Wox.",
+  "Author": "Wang Jinli",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://free.currencyconverterapi.com/",
+  "IcoPath": "img\\icon.png",
+  "ExecuteFileName": "CurrencyConverter.dll"
+}

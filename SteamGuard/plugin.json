@@ -1,0 +1,12 @@
+{
+  "ID": "F973ECEAEB6A4D2D89E39E79513A796C",
+  "ActionKeyword": "sg",
+  "Name": "Steam Guard",
+  "Description": "Generate Steam guard code.",
+  "Author": "Wang Jinli",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://github.com/JeziL/PySteamGuard",
+  "IcoPath": "img\\steam.png",
+  "ExecuteFileName": "SteamGuard.dll"
+}

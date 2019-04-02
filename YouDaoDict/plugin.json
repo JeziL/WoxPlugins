@@ -1,0 +1,12 @@
+{
+  "ID": "B37614A69D9D449D81715E2A42803BAB",
+  "ActionKeyword": "def",
+  "Name": "YouDao Dict",
+  "Description": "A dictionary powered by YouDao.",
+  "Author": "Wang Jinli",
+  "Version": "1.0",
+  "Language": "csharp",
+  "Website": "https://www.youdao.com/",
+  "ExecuteFileName": "YouDaoDict.dll",
+  "IcoPath": "img\\youdao.ico"
+}
