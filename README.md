@@ -10,7 +10,7 @@
 
 ## CurrencyConverter
 
-**多种货币对人民币汇率转换。** 使用前需[在此](https://free.currencyconverterapi.com/free-api-key)申请免费 API Key，并将 API Key 保存为纯文本文件 `APIKEY`（无扩展名），放置于插件目录下。支持的所有货币代码[见此](https://github.com/JeziL/WoxPlugins/CurrencyConverter/CurrencyConverter.cs#L13)。
+**多种货币对人民币汇率转换。** 使用前需[在此](https://free.currencyconverterapi.com/free-api-key)申请免费 API Key，并将 API Key 保存为纯文本文件 `APIKEY`（无扩展名），放置于插件目录下。支持的所有货币代码[见此](https://github.com/JeziL/WoxPlugins/blob/master/CurrencyConverter/CurrencyConverter.cs#L13)。
 
 ![CurrencyConverter](.github/img/CurrencyConverter.png)
 
