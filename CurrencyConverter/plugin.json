@@ -6,7 +6,7 @@
   "Author": "Wang Jinli",
   "Version": "1.0.0",
   "Language": "csharp",
-  "Website": "https://free.currencyconverterapi.com/",
+  "Website": "https://github.com/JeziL/WoxPlugins",
   "IcoPath": "img\\icon.png",
   "ExecuteFileName": "CurrencyConverter.dll"
 }

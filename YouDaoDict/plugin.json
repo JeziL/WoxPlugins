@@ -6,7 +6,7 @@
   "Author": "Wang Jinli",
   "Version": "1.0",
   "Language": "csharp",
-  "Website": "https://www.youdao.com/",
+  "Website": "https://github.com/JeziL/WoxPlugins",
   "ExecuteFileName": "YouDaoDict.dll",
   "IcoPath": "img\\youdao.ico"
 }

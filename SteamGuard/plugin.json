@@ -6,7 +6,7 @@
   "Author": "Wang Jinli",
   "Version": "1.0.0",
   "Language": "csharp",
-  "Website": "https://github.com/JeziL/PySteamGuard",
+  "Website": "https://github.com/JeziL/WoxPlugins",
   "IcoPath": "img\\steam.png",
   "ExecuteFileName": "SteamGuard.dll"
 }
