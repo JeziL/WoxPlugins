@@ -2,6 +2,8 @@
 
 [Wox](http://www.wox.one/) 是一款开源的 Windows 平台的启动器，与 macOS 上著名的同类 App [Alfred](https://www.alfredapp.com/) 一样，它也支持通过编写插件扩展自身的功能。以下是本仓库中的 Wox 插件简介。
 
+[到 Releases 下载](https://github.com/JeziL/WoxPlugins/releases/latest)
+
 ## YouDaoDict
 
 **通过有道词典进行英译汉查询。**
