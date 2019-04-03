@@ -16,13 +16,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\releases\SteamGuard\</OutputPath>
+    <OutputPath>..\bin\releases\SteamGuard\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'SteamGuard|AnyCPU'">
-    <OutputPath>..\releases\SteamGuard\</OutputPath>
+    <OutputPath>..\bin\releases\SteamGuard\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>

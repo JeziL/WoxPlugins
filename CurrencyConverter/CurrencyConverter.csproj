@@ -16,13 +16,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\releases\CurrencyConverter\</OutputPath>
+    <OutputPath>..\bin\releases\CurrencyConverter\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'CurrencyConverter|AnyCPU'">
-    <OutputPath>..\releases\CurrencyConverter\</OutputPath>
+    <OutputPath>..\bin\releases\CurrencyConverter\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
