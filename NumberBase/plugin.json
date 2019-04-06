@@ -1,0 +1,12 @@
+{
+  "ID": "6F049DF0A8FC4F28962DE6DE62F38383",
+  "ActionKeyword": "*",
+  "Name": "Number Base",
+  "Description": "A number base converter for Wox.",
+  "Author": "Wang Jinli",
+  "Version": "1.0.0",
+  "Language": "csharp",
+  "Website": "https://github.com/JeziL/WoxPlugins",
+  "IcoPath": "img\\icon.png",
+  "ExecuteFileName": "NumberBase.dll"
+}

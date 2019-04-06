@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2036
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SteamGuard", "SteamGuard\SteamGuard.csproj", "{273A0CE8-5B82-4A3A-B40F-19005DAE7728}"
 EndProject
@@ -9,21 +9,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouDaoDict", "YouDaoDict\Yo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter", "CurrencyConverter\CurrencyConverter.csproj", "{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberBase", "NumberBase\NumberBase.csproj", "{9A509FFC-D8C4-4040-9794-D26E32984EB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CurrencyConverter|Any CPU = CurrencyConverter|Any CPU
+		NumberBase|Any CPU = NumberBase|Any CPU
 		Release|Any CPU = Release|Any CPU
 		SteamGuard|Any CPU = SteamGuard|Any CPU
 		YouDaoDict|Any CPU = YouDaoDict|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.CurrencyConverter|Any CPU.ActiveCfg = SteamGuard|Any CPU
+		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.NumberBase|Any CPU.ActiveCfg = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.Release|Any CPU.ActiveCfg = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.Release|Any CPU.Build.0 = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.SteamGuard|Any CPU.ActiveCfg = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.SteamGuard|Any CPU.Build.0 = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.YouDaoDict|Any CPU.ActiveCfg = SteamGuard|Any CPU
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.CurrencyConverter|Any CPU.ActiveCfg = YouDaoDict|Any CPU
+		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.NumberBase|Any CPU.ActiveCfg = YouDaoDict|Any CPU
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.Release|Any CPU.ActiveCfg = YouDaoDict|Any CPU
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.Release|Any CPU.Build.0 = YouDaoDict|Any CPU
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.SteamGuard|Any CPU.ActiveCfg = YouDaoDict|Any CPU
@@ -31,10 +36,18 @@ Global
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.YouDaoDict|Any CPU.Build.0 = YouDaoDict|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.CurrencyConverter|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.CurrencyConverter|Any CPU.Build.0 = CurrencyConverter|Any CPU
+		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.NumberBase|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.Release|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.Release|Any CPU.Build.0 = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.SteamGuard|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.YouDaoDict|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
+		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.CurrencyConverter|Any CPU.ActiveCfg = NumberBase|Any CPU
+		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.NumberBase|Any CPU.ActiveCfg = NumberBase|Any CPU
+		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.NumberBase|Any CPU.Build.0 = NumberBase|Any CPU
+		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.Release|Any CPU.ActiveCfg = NumberBase|Any CPU
+		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.Release|Any CPU.Build.0 = NumberBase|Any CPU
+		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.SteamGuard|Any CPU.ActiveCfg = NumberBase|Any CPU
+		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.YouDaoDict|Any CPU.ActiveCfg = NumberBase|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
