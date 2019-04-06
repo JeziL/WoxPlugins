@@ -16,6 +16,12 @@
 
 ![CurrencyConverter](.github/img/CurrencyConverter.png)
 
+## NumberBase
+
+**进制转换。** 分别使用 `0b`、`0d` 和 `0x` 作为前缀在二进制、十进制和十六进制之间进行转换。
+
+![NumberBase](.github/img/NumberBase.png)
+
 ## SteamGuard
 
 **获取 Steam 手机令牌的动态验证代码。** 使用前需参考[这里](https://github.com/SteamTimeIdler/stidler/wiki/Getting-your-%27shared_secret%27-code-for-use-with-Auto-Restarter-on-Mobile-Authentication)获取 Steam 账户的 `shared_secret`，并将其保存为纯文本文件 `SECRET`（无扩展名），放置于插件目录下。
