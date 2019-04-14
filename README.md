@@ -6,9 +6,15 @@
 
 ## YouDaoDict
 
-**通过有道词典进行英译汉查询。**
+**通过[有道词典](https://www.youdao.com/)进行英译汉查询。**
 
 ![YouDaoDict](.github/img/YouDaoDict.png)
+
+## FrDict
+
+**通过[法语助手](http://www.frdic.com/)进行法译汉查询。**
+
+![FrDict](.github/img/FrDict.png)
 
 ## CurrencyConverter
 
