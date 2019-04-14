@@ -1,0 +1,12 @@
+{
+  "ID": "7DF11D4ECA484D848EECC8FB3F25C8C7",
+  "ActionKeyword": "fr",
+  "Name": "FrDict",
+  "Description": "A french dictionary powered by frdic.com.",
+  "Author": "Wang Jinli",
+  "Version": "1.0",
+  "Language": "csharp",
+  "Website": "https://github.com/JeziL/WoxPlugins",
+  "ExecuteFileName": "FrDict.dll",
+  "IcoPath": "img\\frdict.png"
+}

@@ -11,9 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter", "Curren
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberBase", "NumberBase\NumberBase.csproj", "{9A509FFC-D8C4-4040-9794-D26E32984EB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrDict", "FrDict\FrDict.csproj", "{F6A553E3-7150-46F3-94A5-FBB528BA8E99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CurrencyConverter|Any CPU = CurrencyConverter|Any CPU
+		FrDict|Any CPU = FrDict|Any CPU
 		NumberBase|Any CPU = NumberBase|Any CPU
 		Release|Any CPU = Release|Any CPU
 		SteamGuard|Any CPU = SteamGuard|Any CPU
@@ -21,6 +24,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.CurrencyConverter|Any CPU.ActiveCfg = SteamGuard|Any CPU
+		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.FrDict|Any CPU.ActiveCfg = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.NumberBase|Any CPU.ActiveCfg = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.Release|Any CPU.ActiveCfg = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.Release|Any CPU.Build.0 = SteamGuard|Any CPU
@@ -28,6 +32,7 @@ Global
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.SteamGuard|Any CPU.Build.0 = SteamGuard|Any CPU
 		{273A0CE8-5B82-4A3A-B40F-19005DAE7728}.YouDaoDict|Any CPU.ActiveCfg = SteamGuard|Any CPU
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.CurrencyConverter|Any CPU.ActiveCfg = YouDaoDict|Any CPU
+		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.FrDict|Any CPU.ActiveCfg = YouDaoDict|Any CPU
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.NumberBase|Any CPU.ActiveCfg = YouDaoDict|Any CPU
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.Release|Any CPU.ActiveCfg = YouDaoDict|Any CPU
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.Release|Any CPU.Build.0 = YouDaoDict|Any CPU
@@ -36,18 +41,28 @@ Global
 		{51409A7F-DAE1-4AF5-88F9-C7468B017C87}.YouDaoDict|Any CPU.Build.0 = YouDaoDict|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.CurrencyConverter|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.CurrencyConverter|Any CPU.Build.0 = CurrencyConverter|Any CPU
+		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.FrDict|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.NumberBase|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.Release|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.Release|Any CPU.Build.0 = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.SteamGuard|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{91EE9ABE-17CE-4EAE-83AC-3DA96D3C891A}.YouDaoDict|Any CPU.ActiveCfg = CurrencyConverter|Any CPU
 		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.CurrencyConverter|Any CPU.ActiveCfg = NumberBase|Any CPU
+		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.FrDict|Any CPU.ActiveCfg = NumberBase|Any CPU
 		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.NumberBase|Any CPU.ActiveCfg = NumberBase|Any CPU
 		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.NumberBase|Any CPU.Build.0 = NumberBase|Any CPU
 		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.Release|Any CPU.ActiveCfg = NumberBase|Any CPU
 		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.Release|Any CPU.Build.0 = NumberBase|Any CPU
 		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.SteamGuard|Any CPU.ActiveCfg = NumberBase|Any CPU
 		{9A509FFC-D8C4-4040-9794-D26E32984EB9}.YouDaoDict|Any CPU.ActiveCfg = NumberBase|Any CPU
+		{F6A553E3-7150-46F3-94A5-FBB528BA8E99}.CurrencyConverter|Any CPU.ActiveCfg = FrDict|Any CPU
+		{F6A553E3-7150-46F3-94A5-FBB528BA8E99}.FrDict|Any CPU.ActiveCfg = FrDict|Any CPU
+		{F6A553E3-7150-46F3-94A5-FBB528BA8E99}.FrDict|Any CPU.Build.0 = FrDict|Any CPU
+		{F6A553E3-7150-46F3-94A5-FBB528BA8E99}.NumberBase|Any CPU.ActiveCfg = FrDict|Any CPU
+		{F6A553E3-7150-46F3-94A5-FBB528BA8E99}.Release|Any CPU.ActiveCfg = FrDict|Any CPU
+		{F6A553E3-7150-46F3-94A5-FBB528BA8E99}.Release|Any CPU.Build.0 = FrDict|Any CPU
+		{F6A553E3-7150-46F3-94A5-FBB528BA8E99}.SteamGuard|Any CPU.ActiveCfg = FrDict|Any CPU
+		{F6A553E3-7150-46F3-94A5-FBB528BA8E99}.YouDaoDict|Any CPU.ActiveCfg = FrDict|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
