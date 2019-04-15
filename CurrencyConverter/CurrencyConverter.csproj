@@ -80,8 +80,8 @@
   <PropertyGroup>
     <PostBuildEvent>@echo 开始打包 $(ProjectName)...
 CD $(SolutionDir)bin\releases\
-"C:\Program Files\7-Zip\7z.exe" a -tzip $(ProjectName).zip $(ProjectName)\ -mx0 &gt; nul
-MOVE  "$(ProjectName).zip" "..\public" &gt; nul
+"C:\Program Files\7-Zip\7z.exe" a -tzip $(ProjectName).wox .\$(ProjectName)\* -mx0 &gt; nul
+MOVE  "$(ProjectName).wox" "..\public" &gt; nul
 @echo $(ProjectName) 打包完成</PostBuildEvent>
   </PropertyGroup>
 </Project>
