@@ -10,15 +10,18 @@ namespace WoxPlugins.NumberBase {
             public int val { get; set; }
             public string name { get; set; }
         }
+
         public void Init(PluginInitContext context) { }
-        private bool isValid(Query query) {
+
+        private bool IsValid(Query query) {
             if (query.Terms.Length != 1) return false;
             if (!Regex.Match(query.FirstSearch, @"^0([xX][\dA-Fa-f]+|[dD]\d+|[bB][01]+)$").Success) return false;
             return true;
         }
+
         public List<Result> Query(Query query) {
             List<Result> results = new List<Result>();
-            if (!isValid(query)) return results;
+            if (!IsValid(query)) return results;
             var baseDict = new Dictionary<string, NumBase>() {
                 { "0b", new NumBase { val=2, name="二进制" } },
                 { "0d", new NumBase { val=10, name="十进制" } },

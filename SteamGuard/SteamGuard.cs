@@ -11,13 +11,16 @@ namespace WoxPlugins.SteamGuard {
         private PluginInitContext _context;
         private readonly Settings _settings;
         private readonly PluginJsonStorage<Settings> _storage;
+
         public SteamGuard() {
             _storage = new PluginJsonStorage<Settings>();
             _settings = _storage.Load();
         }
+
         public void Save() {
             _storage.Save();
         }
+
         private string GetCurrentSteamGuardCode(string secret) {
             int[] steam_guard_code_table = { 50, 51, 52, 53, 54, 55, 56, 57, 66, 67, 68, 70, 71,
                                              72, 74, 75, 77, 78, 80, 81, 82, 84, 86, 87, 88, 89 };
@@ -42,13 +45,15 @@ namespace WoxPlugins.SteamGuard {
             }
             return new string(guard_code_arr.ToArray());
         }
+
         public void Init(PluginInitContext context) {
             _context = context;
         }
+
         public List<Result> Query(Query query) {
             List<Result> results = new List<Result>();
             try {
-                if (!_settings.isValid()) {
+                if (!_settings.IsValid()) {
                     results.Add(new Result() {
                         Title = "Shared secret 非法",
                         SubTitle = "打开设置",
@@ -86,6 +91,7 @@ namespace WoxPlugins.SteamGuard {
             });
             return results;
         }
+
         public Control CreateSettingPanel() {
             return new SettingPanel(_settings);
         }

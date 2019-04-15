@@ -18,8 +18,11 @@ namespace WoxPlugins.FrDict {
             public string tag { get; set; }
             public string value { get; set; }
         }
+
         private static readonly HttpClient _client = new HttpClient();
+
         public void Init(PluginInitContext context) { }
+
         public List<Result> Query(Query query) {
             var results = new List<Result>();
             string url = string.Format("http://www.frdic.com/dicts/prefix/{0}", query.Search);

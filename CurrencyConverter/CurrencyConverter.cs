@@ -26,26 +26,31 @@ namespace WoxPlugins.CurrencyConverter {
                                         "KES", "KGS", "LRD", "MOP", "MVR", "MXN", "NAD", "NOK", "PLN", "RUB", "SZL", "TJS",
                                         "TTD", "UGX", "UYU", "VND", "TND", "UAH", "UZS", "TMT", "GBP", "ZMW", "BTC", "BYN"};
         private static readonly HttpClient _client = new HttpClient();
+
         public CurrencyConverter() {
             _storage = new PluginJsonStorage<Settings>();
             _settings = _storage.Load();
         }
+
         public void Save() {
             _storage.Save();
         }
+
         public void Init(PluginInitContext context) {
             _context = context;
         }
-        private bool isValid(Query query) {
+
+        private bool IsValid(Query query) {
             if (query.Terms.Length != 2) return false;
             if (!_CURRENCIES.Contains(query.FirstSearch.ToUpper())) return false;
             return float.TryParse(query.SecondSearch, out float val);
         }
+
         public List<Result> Query(Query query) {
             var results = new List<Result>();
-            if (!isValid(query)) return results;
+            if (!IsValid(query)) return results;
             try {
-                if (!_settings.isValid()) {
+                if (!_settings.IsValid()) {
                     results.Add(new Result() {
                         Title = "API Key 非法",
                         SubTitle = "打开设置",
@@ -90,6 +95,7 @@ namespace WoxPlugins.CurrencyConverter {
                 return results;
             }
         }
+
         public Control CreateSettingPanel() {
             return new SettingPanel(_settings);
         }
