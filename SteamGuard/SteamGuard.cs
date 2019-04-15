@@ -1,14 +1,23 @@
 ﻿using System;
-using System.IO;
 using Wox.Plugin;
 using System.Windows;
+using System.Windows.Controls;
 using System.Collections.Generic;
+using Wox.Infrastructure.Storage;
 using System.Security.Cryptography;
 
 namespace WoxPlugins.SteamGuard {
-    public class SteamGuard : IPlugin {
-        private string _secret;
+    public class SteamGuard : IPlugin, ISettingProvider, ISavable {
         private PluginInitContext _context;
+        private readonly Settings _settings;
+        private readonly PluginJsonStorage<Settings> _storage;
+        public SteamGuard() {
+            _storage = new PluginJsonStorage<Settings>();
+            _settings = _storage.Load();
+        }
+        public void Save() {
+            _storage.Save();
+        }
         private string GetCurrentSteamGuardCode(string secret) {
             int[] steam_guard_code_table = { 50, 51, 52, 53, 54, 55, 56, 57, 66, 67, 68, 70, 71,
                                              72, 74, 75, 77, 78, 80, 81, 82, 84, 86, 87, 88, 89 };
@@ -34,13 +43,37 @@ namespace WoxPlugins.SteamGuard {
             return new string(guard_code_arr.ToArray());
         }
         public void Init(PluginInitContext context) {
-            string secret_path = Path.Combine(context.CurrentPluginMetadata.PluginDirectory, "SECRET");
-            _secret = File.ReadAllText(secret_path).Trim();
             _context = context;
         }
         public List<Result> Query(Query query) {
             List<Result> results = new List<Result>();
-            string guard_code = GetCurrentSteamGuardCode(_secret);
+            try {
+                if (!_settings.isValid()) {
+                    results.Add(new Result() {
+                        Title = "Shared secret 非法",
+                        SubTitle = "打开设置",
+                        IcoPath = "img\\steam.png",
+                        Action = _ => {
+                            _context.API.OpenSettingDialog();
+                            return true;
+                        }
+                    });
+                    return results;
+                }
+            }
+            catch {
+                results.Add(new Result() {
+                    Title = "Shared secret 未设置",
+                    SubTitle = "打开设置",
+                    IcoPath = "img\\steam.png",
+                    Action = _ => {
+                        _context.API.OpenSettingDialog();
+                        return true;
+                    }
+                });
+                return results;
+            }
+            string guard_code = GetCurrentSteamGuardCode(_settings.SharedSecret);
             results.Add(new Result() {
                 Title = guard_code,
                 SubTitle = "Steam 令牌",
@@ -52,6 +85,9 @@ namespace WoxPlugins.SteamGuard {
                 }
             });
             return results;
+        }
+        public Control CreateSettingPanel() {
+            return new SettingPanel(_settings);
         }
     }
 }
