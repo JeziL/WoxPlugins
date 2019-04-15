@@ -1,15 +1,17 @@
-﻿using System.IO;
-using Wox.Plugin;
+﻿using Wox.Plugin;
 using System.Linq;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Globalization;
+using System.Windows.Controls;
 using System.Collections.Generic;
+using Wox.Infrastructure.Storage;
 
 namespace WoxPlugins.CurrencyConverter {
-    public class CurrencyConverter : IPlugin {
-        private string _apiKey;
+    public class CurrencyConverter : IPlugin, ISettingProvider, ISavable {
         private PluginInitContext _context;
+        private readonly Settings _settings;
+        private readonly PluginJsonStorage<Settings> _storage;
         private string[] _CURRENCIES = {"ALL", "XCD", "EUR", "BBD", "BTN", "BND", "XAF", "CUP", "USD", "FKP", "GIP", "HUF",
                                         "IRR", "JMD", "AUD", "LAK", "LYD", "MKD", "XOF", "NZD", "OMR", "PGK", "RWF", "WST",
                                         "RSD", "SEK", "TZS", "AMD", "BSD", "BAM", "CVE", "CNY", "CRC", "CZK", "ERN", "GEL",
@@ -24,9 +26,14 @@ namespace WoxPlugins.CurrencyConverter {
                                         "KES", "KGS", "LRD", "MOP", "MVR", "MXN", "NAD", "NOK", "PLN", "RUB", "SZL", "TJS",
                                         "TTD", "UGX", "UYU", "VND", "TND", "UAH", "UZS", "TMT", "GBP", "ZMW", "BTC", "BYN"};
         private static readonly HttpClient _client = new HttpClient();
+        public CurrencyConverter() {
+            _storage = new PluginJsonStorage<Settings>();
+            _settings = _storage.Load();
+        }
+        public void Save() {
+            _storage.Save();
+        }
         public void Init(PluginInitContext context) {
-            string apikey_path = Path.Combine(context.CurrentPluginMetadata.PluginDirectory, "APIKEY");
-            _apiKey = File.ReadAllText(apikey_path).Trim();
             _context = context;
         }
         private bool isValid(Query query) {
@@ -37,9 +44,35 @@ namespace WoxPlugins.CurrencyConverter {
         public List<Result> Query(Query query) {
             var results = new List<Result>();
             if (!isValid(query)) return results;
+            try {
+                if (!_settings.isValid()) {
+                    results.Add(new Result() {
+                        Title = "API Key 非法",
+                        SubTitle = "打开设置",
+                        IcoPath = "img\\cny.ico",
+                        Action = _ => {
+                            _context.API.OpenSettingDialog();
+                            return true;
+                        }
+                    });
+                    return results;
+                }
+            }
+            catch {
+                results.Add(new Result() {
+                    Title = "API Key 未设置",
+                    SubTitle = "打开设置",
+                    IcoPath = "img\\cny.ico",
+                    Action = _ => {
+                        _context.API.OpenSettingDialog();
+                        return true;
+                    }
+                });
+                return results;
+            }
             string currency = query.FirstSearch.ToUpper();
             float value = float.Parse(query.SecondSearch, CultureInfo.InvariantCulture.NumberFormat);
-            string url = string.Format("https://free.currencyconverterapi.com/api/v6/convert?q={0}_CNY&compact=ultra&apiKey={1}", currency, _apiKey);
+            string url = string.Format("https://free.currencyconverterapi.com/api/v6/convert?q={0}_CNY&compact=ultra&apiKey={1}", currency, _settings.APIKey);
             try {
                 string responseBody = _client.GetStringAsync(url).Result;
                 var resp = JsonConvert.DeserializeObject<Dictionary<string, float>>(responseBody);
@@ -56,6 +89,9 @@ namespace WoxPlugins.CurrencyConverter {
             catch {
                 return results;
             }
+        }
+        public Control CreateSettingPanel() {
+            return new SettingPanel(_settings);
         }
     }
 }
